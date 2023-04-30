@@ -14,7 +14,7 @@ function Library() {
     })
   }
   return (
-    <div className="App">
+    <div>
       <button onClick={getAPI}>Fetch API</button>
       {JSON.stringify()}
     </div>
