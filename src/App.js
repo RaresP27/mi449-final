@@ -48,7 +48,7 @@ function App() {
         <div className="Cover">{ParksAndRec}</div>
         <div class="grid text-center" style={{display: "grid"}}>
           <div class="g-col-4">Summary: <br></br>
-            {show.summary}
+            {show.summary.replace("<p>","")}
           </div>
           <div class="g-col-4"> The Show's Runtime: <br></br>
             Show began: {show.premiered} <br></br>
