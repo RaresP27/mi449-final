@@ -38,6 +38,7 @@ function App() {
   useEffect(() => {
     fetchTV();
   },[])
+
   //fetch method barrowed from https://statusneo.com/different-ways-to-fetch-data-from-api-in-reactjs/
 
   return (
@@ -49,11 +50,11 @@ function App() {
         <div className="Cover">{ParksAndRec}</div>
         <div class="grid text-center" style={{display: "grid"}}>
           <div class="g-col-4">Summary: <br></br>
-          {show.summary.replace("<p>", "").replace("</p>", "").replace("<b>","").replace("</b>","")}
+            {show.summary}
           </div>
           <div class="g-col-4"> The Show's Runtime: <br></br>
-          Show began: {show.premiered} <br></br>
-          Show ended: {show.ended} </div>
+            Show began: {show.premiered} <br></br>
+            Show ended: {show.ended} </div>
         </div>
         <div>
         <p className="Quote">"{quote}" - Ron Swanson (AKA my favorite character)</p></div>
