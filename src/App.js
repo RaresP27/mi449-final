@@ -38,15 +38,6 @@ function App() {
   useEffect(() => {
     fetchTV();
   },[])
-  const [actor, setActors] = useState([]);
-  const fetchActors = () => {
-    return fetch("https://api.tvmaze.com/shows/174/cast")
-          .then((response) => response.json())
-          .then((data) => setActors(data));
-  }
-  useEffect(() => {
-    fetchActors();
-  },[])
   //fetch method barrowed from https://statusneo.com/different-ways-to-fetch-data-from-api-in-reactjs/
 
   return (
