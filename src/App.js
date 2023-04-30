@@ -18,17 +18,6 @@ function App() {
     }
     </>
   );
-  const [quote, setQuote] = useState([]);
-
-  const fetchData = () => {
-    return fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes")
-          .then((response) => response.json())
-          .then((data) => setQuote(data));
-  }
-
-  useEffect(() => {
-    fetchData();
-  },[])
   const [show, setTVShow] = useState([]);
   const fetchTV = () => {
     return fetch("https://api.tvmaze.com/lookup/shows?imdb=tt1266020")
@@ -38,7 +27,16 @@ function App() {
   useEffect(() => {
     fetchTV();
   },[])
+  const [quote, setQuote] = useState([]);
 
+  const fetchData = () => {
+    return fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes")
+          .then((response) => response.json())
+          .then((data) => setQuote(data));
+  }
+  useEffect(() => {
+    fetchData();
+  },[])
   //fetch method barrowed from https://statusneo.com/different-ways-to-fetch-data-from-api-in-reactjs/
 
   return (
