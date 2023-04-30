@@ -30,7 +30,7 @@ function App() {
   const [quote, setQuote] = useState([]);
 
   const fetchData = () => {
-    return fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes")
+    return fetch("https://ron-swanson-quotes.herokuapp.com/v2/quotes")
           .then((response) => response.json())
           .then((data) => setQuote(data));
   }
