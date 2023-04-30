@@ -46,6 +46,7 @@ function App() {
           Parks and Rec, a Brief Overview
         </h1>
         <div className="Cover">{ParksAndRec}</div>
+        <div className="photoSource"><p className="photoSource">Source for photo: <a href="https://m.media-amazon.com/images/M/MV5BYWNkOTg0OTMtZTcyNy00MWU1LWJhZDQtYjQzMjU1NjBhYzI2XkEyXkFqcGdeQXVyOTE4NzcwNzI@._V1_.jpg">Parks and Rec</a></p></div>
         <div class="grid text-center" style={{display: "grid"}}>
           <div class="g-col-4">Summary: <br></br>
             {show.summary?.replace("<p>", "")?.replace("</p>","")?.replace("<b>","")?.replace("</b>","")}

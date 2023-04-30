@@ -19,6 +19,10 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.photoSource {
+  color: antiquewhite;
+  font-size: smaller;
+}
 .SwansonQuote {
   color: antiquewhite;
 }
